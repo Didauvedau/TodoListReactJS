@@ -37,7 +37,7 @@ const Toggle = () => {
           className="w-25 h-25 btn btn-success"
           onClick={() => setToggle(!toggle)}
         >
-          Open
+          {!toggle ? "Open" : "Close"}
         </button>
         <div className="input-image add-image d-flex ms-2">
           <input

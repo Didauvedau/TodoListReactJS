@@ -14,12 +14,11 @@ import CountUseRef from "./components/useRef/CountUseRef";
 function App() {
   return (
     <div className="App">
-      {/* <First></First>
-
+      <First></First>
       <Gift></Gift>
       <Bind></Bind>
-      <TodoList></TodoList> */}
-      {/* <Toggle></Toggle> */}
+      <TodoList></TodoList>
+      <Toggle></Toggle>
       <CountUseRef></CountUseRef>
     </div>
   );
