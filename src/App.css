@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(107, 152, 168) 45%,
+    rgb(163, 88, 157) 45%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+  text-shadow: -1px 2px rgba(179, 118, 118, 0.5);
+  background: -webkit-linear-gradient(rgb(189, 184, 125), #84a8ae);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
