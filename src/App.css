@@ -1,3 +1,9 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
 .App {
   text-align: center;
 }
@@ -51,4 +57,34 @@ h2 {
   background: -webkit-linear-gradient(rgb(189, 184, 125), #84a8ae);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.scroll {
+  width: 60px;
+  height: 60px;
+  right: 20px !important;
+  position: fixed;
+  bottom: 20px;
+}
+::selection {
+  background: rgb(174, 238, 229);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(7, 0, 211, 1) 100%
+  );
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 208, 213);
+}
+
+.input-image {
+  width: 180px;
 }
