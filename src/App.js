@@ -10,16 +10,27 @@ import TodoList from "./components/useState/TodoList";
 import Content from "./components/useEffect/Content";
 import Toggle from "./components/useEffect/Toggle";
 import CountUseRef from "./components/useRef/CountUseRef";
+import Parent from "./components/useMemo/Parent";
+import ReducerParent from "./components/useReducer/ReducerParent";
+import TodoReducer from "./components/useReducer/TodoReducer";
+
+// import Count from "./components/memo/Count";
+import Count from "./components/useCallback/Count";
 
 function App() {
   return (
     <div className="App">
-      <First></First>
+      {/* <First></First>
       <Gift></Gift>
       <Bind></Bind>
       <TodoList></TodoList>
       <Toggle></Toggle>
       <CountUseRef></CountUseRef>
+      <Count></Count> */}
+      <Count></Count>
+      <Parent></Parent>
+      <ReducerParent></ReducerParent>
+      <TodoReducer></TodoReducer>
     </div>
   );
 }

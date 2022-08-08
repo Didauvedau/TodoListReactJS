@@ -88,3 +88,16 @@ h2 {
 .input-image {
   width: 180px;
 }
+
+.fontSize{
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px #84a8ae;
+}
+
+input{
+  width: 250px;
+}
+
+button{
+  width: 250px;
+}
