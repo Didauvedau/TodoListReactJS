@@ -89,15 +89,26 @@ h2 {
   width: 180px;
 }
 
-.fontSize{
+.fontSize {
   font-size: 5rem;
   text-shadow: 2px 2px 4px #84a8ae;
 }
 
-input{
+input {
   width: 250px;
 }
 
-button{
+button {
   width: 250px;
+}
+span {
+  cursor: pointer;
+}
+li {
+  width: 50%;
+}
+
+.dark {
+  color: #fff;
+  background-color: #333;
 }

@@ -1,73 +1,12 @@
 import React, { useReducer, useRef } from "react";
 
 //1. Init State
-const initState = {
-  job: "",
-  jobs: [],
-};
+
 //2. Actions (Luôn viết hoac và cách nhau bằng dấu _)
-const SET_JOB = "set_job";
-const ADD_JOB = "add_job";
-const DELETE_JOB = "delete_job";
-
-const setJob = (payload) => {
-  return {
-    type: SET_JOB,
-    payload,
-  };
-};
-
-const addJob = (payload) => {
-  return {
-    type: ADD_JOB,
-    payload,
-  };
-};
-
-const deleteJob = (payload) => {
-  return {
-    type: DELETE_JOB,
-    payload,
-  };
-};
-
-console.log(setJob());
+import { setJob, addJob, deleteJob } from "./todoActions";
 
 //3. reducer
-const reducer = (state, action) => {
-  console.log("Action: ", action);
-  console.log("PrevState", state);
-  let newState;
-  switch (action.type) {
-    case SET_JOB:
-      newState = {
-        ...state,
-        job: action.payload,
-      };
-      break;
-    case ADD_JOB:
-      newState = {
-        ...state,
-        jobs: [...state.jobs, action.payload],
-      };
-      break;
-    case DELETE_JOB:
-      const newJobs = [...state.jobs];
-
-      newJobs.splice(action.payload, 1);
-
-      newState = {
-        ...state,
-        jobs: newJobs,
-      };
-      break;
-    default:
-      throw new Error("Invalid Chosen");
-  }
-  console.log("newState", newState);
-
-  return newState;
-};
+import reducer, { initState } from "./reducerOfTodo";
 
 //4. dispatch
 
@@ -103,12 +42,12 @@ const TodoReducer = () => {
         </div>
       </div>
       <div className="m-2">
-        <ul className="list-group">
+        <ul className="list-group align-items-center">
           {jobs.map((job, index) => (
-            <li className="list-group-item" key={index}>
+            <li className="list-group-item mt-1" key={index}>
               {job}{" "}
               <span
-                className="text-danger fs-3"
+                className="text-danger fs-2 ms-2"
                 onClick={() => dispatch(deleteJob(index))}
               >
                 &times;
